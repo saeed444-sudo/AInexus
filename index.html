@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="JRE9cuNt5iG8mwBugaJuIhQEcMFniJRCW930Gj4IQ8A" />
+<title>AI Nexus - Premium AI Tools Directory</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+<div class="container">
+<div class="logo">
+<span class="logo-icon">AI</span>
+<span class="logo-text">Nexus</span>
+</div>
+<nav class="nav">
+<ul>
+<li><a href="#home" class="active">Home</a></li>
+<li><a href="#tools">Tools</a></li>
+<li><a href="#about">About</a></li>
+</ul>
+</nav>
+<div class="header-buttons">
+<button class="mobile-menu-btn" aria-label="Toggle navigation menu">
+<i class="fas fa-bars"></i>
+</button>
+</div>
+</div>
+</header>
+
+<main id="main-content">
+<section id="home" class="hero">
+<div class="hero-content">
+<h1>Welcome to the Digital World</h1>
+<p class="subtext">
+Begin your journey with AI
+</p>
+<a href="#tools" class="btn-explore">Explore Tools <i class="fas fa-arrow-down"></i></a>
+</div>
+<div class="hero-scroll-indicator">
+<span></span>
+</div>
+</section>
+
+<section id="tools" class="tools-section">
+<div class="container">
+<div class="tools-header">
+<h2>AI Tools Directory</h2>
+<div class="tools-controls">
+<div class="search-container">
+<input type="text" id="searchInput" placeholder="Search tools..." aria-label="Search AI tools">
+<i class="fas fa-search"></i>
+<div class="search-suggestions" id="searchSuggestions"></div>
+</div>
+<div class="filter-controls">
+<select id="priceFilter" aria-label="Filter by price">
+<option value="all">All Pricing</option>
+<option value="Free">Free</option>
+<option value="Paid">Paid</option>
+<option value="Freemium">Freemium</option>
+<option value="Subscription">Subscription</option>
+<option value="Enterprise">Enterprise</option>
+</select>
+<select id="categoryFilter" aria-label="Filter by category">
+<option value="all">All Categories</option>
+<!-- Categories will be populated by JavaScript -->
+</select>
+</div>
+</div>
+</div>
+
+<div class="tools-layout">
+<div class="tools-content">
+<div class="loading-spinner" id="loadingSpinner">
+<div class="spinner"></div>
+<p>
+Loading AI Tools...
+</p>
+</div>
+<div class="tools-grid" id="toolsGrid">
+<!-- Tools will be populated by JavaScript -->
+</div>
+<div class="pagination" id="pagination">
+<!-- Pagination will be populated by JavaScript -->
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="about" class="about-section">
+<div class="container">
+<h2>About AI Nexus</h2>
+<p>
+AI Nexus is a comprehensive directory of the most powerful and innovative AI tools available today. Our mission is to help you discover the perfect AI solutions for your needs, whether you're a developer, designer, marketer, or just curious about artificial intelligence, all tools are hand-picked and categorized for easy navigation.
+</p>
+</div>
+</section>
+</main>
+
+<footer class="footer">
+<div class="container">
+<div class="footer-content">
+<div class="footer-logo">
+<span class="logo-icon">AI</span>
+<span class="logo-text">Nexus</span>
+</div>
+<div class="footer-links">
+<h4>Quick Links</h4>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#tools">Tools</a></li>
+<li><a href="#about">About</a></li>
+</ul>
+</div>
+<div class="footer-social">
+<h4>Connect</h4>
+<div class="social-icons">
+<a href="https://www.facebook.com/share/17EGz4iyxz/" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+<a href="https://www.instagram.com/saeed7158ahmad?igsh=a3l5MjNoajhkZ3V1" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<p>
+&copy; 2025 AI Nexus. All rights reserved.
+</p>
+</div>
+</div>
+</footer>
+<script src="script.js"></script>
+<script>
+// Register service worker
+if ('serviceWorker' in navigator) {
+window.addEventListener('load', () => {
+navigator.serviceWorker.register('sw.js').then(registration => {
+console.log('ServiceWorker registration successful');
+}).catch(err => {
+console.log('ServiceWorker registration failed: ', err);
+});
+});
+}
+</script>
+</body>
+</html>
